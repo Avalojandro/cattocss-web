@@ -1,5 +1,5 @@
 <template>
-<section class="w-full h-full px-6 pb-12 antialiased bg-gray-900">
+<section class="w-full h-screen px-6 pb-12 antialiased bg-gray-900">
     <div class="mx-auto max-w-7xl">
 
         <!-- Main Hero Content -->
