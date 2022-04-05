@@ -43,12 +43,3 @@
 }
 </style>
 
-<script>
-export default {
-    data() {
-
-    },
-    created(){
-    }
-}
-</script>
