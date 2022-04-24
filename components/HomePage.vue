@@ -9,9 +9,9 @@
             <div class="flex flex-col items-center mt-12 text-center">
                 <span class="relative inline-flex">
                     <nuxt-link to="/gallery">
-                    <a routerLink="" type="button" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-bold leading-6 text-white bg-red-600 border border-transparent md:w-auto hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600 rounded-full">Get started!</a>
+                    <a routerLink="" type="button" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-bold leading-6 text-white bg-primary border border-transparent md:w-auto hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600 rounded-full">Get started!</a>
                     </nuxt-link>
-                    <span class="absolute top-0 right-0 px-2 py-1 -mt-3 -mr-6 text-xs font-medium leading-tight text-white light-blue rounded-full">Everything is free</span>
+                    <span class="absolute top-0 right-0 px-2 py-1 -mt-3 -mr-6 text-xs font-medium leading-tight text-white bg-blue-600 rounded-full">Everything is free</span>
                 </span>
                 <a href="#" class="mt-3 text-sm primary-orange">GitHub</a>
             </div>

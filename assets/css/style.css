@@ -1,11 +1,15 @@
 
 .primary-orange{
-    color: #f71e1e;
+    color: #ff4800;
 }
 
 .border-primary{
     border-width: 1px;
-    border-color: #f71e1e;
+    border-color: #ff4800;
+}
+
+.bg-primary{
+    background-color: #ff4800;
 }
 
 .light-blue{
