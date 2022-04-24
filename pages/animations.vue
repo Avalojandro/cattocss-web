@@ -4,14 +4,12 @@
 
             <!-- Demo view -->
             <div class="h-screen overflow-auto text-white">
-
-                <List/>
-
+                <List @getAnimationName="listDataName" @getAnimationCode="listDataCode"/>
             </div>
             
             <!-- Code view -->
             <div class="text-white items-center justify-center flex">
-               <CodePreview/> 
+               <CodePreview :animationName="animationName" :animationCode="animationCode"/> 
             </div>
         </div>
     </div>
@@ -38,3 +36,22 @@
 
 </style>
 
+<script>
+export default {
+  data(){
+    return {
+      animationName: null,
+      animationCode: null
+    }
+  },
+  methods: {
+    listDataName(value){
+      this.animationName = value;
+    },
+    listDataCode(value){
+      this.animationCode = value;
+    }
+  }
+
+}
+</script>
