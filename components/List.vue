@@ -2,8 +2,8 @@
     <div>
 
         <div class="text-white grid grid-cols-3 gap-4">
-            <div v-for="animation of animations" class="p-10 text-center items-center">
-                <div :class="getAnimation(animation.class)">
+            <div v-for="animation of animations"  v-bind:key="animation" class="p-10 text-center items-center">
+                <div @click="sendData(animation.name, animation.code)" :class="getAnimation(animation.class)">
                     <span>{{animation.name}}</span>
                 </div>
                 
@@ -20,8 +20,29 @@ export default {
     data(){
         return {
             animations: [
-                {name: 'float', id: 0, class: 'h-float'},
-                {name: 'rotate180', id: 1, class: 'h-rotate-180'},
+                {name: 'float', id: 0, class: 'h-float', code: `
+.float{
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+}
+.float:hover{
+    box-shadow: 0 8px 8px 0 #bebbbc,0 8px 8px 0 #adadab;
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    -moz-transform:translate(0px,5px);
+}`},
+                {name: 'rotate180', id: 1, class: 'h-rotate-180', code: `
+.rotate-180{
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+}
+.rotate-180:hover{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+}`},
                 {name: 'rotate360', id: 2, class: 'h-rotate-360'},
                 {name: 'flex', id: 3, class: 'h-flex'},
                 {name: 'transLeft', id: 4, class: 'h-transLeft'},
@@ -55,6 +76,11 @@ export default {
         getAnimation(animationClass){
             let className = 'p-5 cursor-pointer bg-transparent border border-primary bg-primary text-white font-bold rounded';
             return `${className} ${animationClass}`;
+        },
+
+        sendData(name, code){
+            this.$emit('getAnimationName', name);
+            this.$emit('getAnimationCode', code);
         }
     },
     computed: {
