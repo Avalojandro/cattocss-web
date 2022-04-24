@@ -68,7 +68,9 @@
             </a>
         </div>
         <p class="mt-8 text-base leading-6 text-center text-gray-400">
-            © 2022 cattocss - Open source project.
+            <b>cattocss</b> by <b>Avalojandro</b>. 
+                <br>
+            MIT License 2022
         </p>
     </div>
 </section>
