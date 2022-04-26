@@ -43,7 +43,7 @@ export default {
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
 }`},
-                {name: 'rotate360', id: 2, class: 'h-rotate-360'},
+                {name: 'rotate360', id: 2, class: 'h-rotate-360',},
                 {name: 'flex', id: 3, class: 'h-flex'},
                 {name: 'transLeft', id: 4, class: 'h-transLeft'},
                 {name: 'transRight', id: 5, class: 'h-transRight'},
