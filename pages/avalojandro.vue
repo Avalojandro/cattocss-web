@@ -6,6 +6,11 @@
                 <h1 class="primary-orange font-bold text-4xl">I'm</h1>
                 <h1 class="text-white font-bold  text-7xl">Avalojandro</h1>
                 <h1 class="text-gray-500 text-2xl pt-4 leading-8">Front-End Developer, gamer, drummer and creator of cattocss based in LATAM.</h1>
+                <div class="pt-3 space-x-2">
+                  <img src="/git.png" class="inline w-7" alt="">
+                  <img src="/linkedin.png" class="inline w-6" alt="">
+                  <img src="/yt.png" class="inline w-8" alt="">
+                </div>
             </div>
             <div>
                 <center class="relative">
@@ -28,9 +33,10 @@
         <div class="max-w-7xl max mx-auto text-center">
             <h1 class="text-white font-bold text-7xl">Knowledge</h1>
             <center class="py-12">
-                <img src="/knowledge/frontend.png" class="w-64 inline" alt="FrontEnd">
-                <img src="/knowledge/vue.png" class="w-20 mx-2 inline" alt="Vuejs">
-                <img src="/knowledge/angular.png" class="w-20 mx-2 inline" alt="Angular">
+                <img src="/knowledge/frontend.png" class="w-64 inline" alt="Avalojandro">
+                <img src="/knowledge/vue.png" class="w-20 mx-2 inline" alt="Avalojandro">
+                <img src="/knowledge/react.png" class="w-20 mx-2 inline" alt="Avalojandro">
+                <img src="/knowledge/angular.png" class="w-20 mx-2 inline" alt="Avalojandro">
                 <img src="/knowledge/ionic.png" class="w-20 mx-2 inline" alt="Ionic framework">                
             </center>
         </div>
@@ -38,17 +44,17 @@
 
     <div class="py-64 text-center">
 
-         <h1 class="text-white font-bold pb-8 text-7xl">Timeline</h1>
+         <h1 class="text-white font-bold pb-8 text-7xl">My Bio</h1>
 
     <div class="max-w-7xl max mx-auto text-center">
-<div class="container">
+      <div class="container">
           <div
             class="flex flex-col md:grid grid-cols-9 mx-auto p-2 text-blue-50"
           >
             <!-- left -->
             <div class="flex flex-row-reverse md:contents">
               <div
-                class="bg-blue-700 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md"
+                class="bg-blue-700 w-2/4 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md"
               >
                 <h3 class="font-semibold text-lg mb-1">2016</h3>
                 <p class="leading-tight text-center">
@@ -75,7 +81,7 @@
                 ></div>
               </div>
               <div
-                class="bg-blue-700 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md"
+                class="bg-blue-700 w-2/4 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md"
               >
                 <h3 class="font-semibold text-lg mb-1">2018</h3>
                 <p class="leading-tight text-center">
@@ -86,7 +92,7 @@
             <!-- left -->
             <div class="flex flex-row-reverse md:contents">
               <div
-                class="bg-blue-700 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md"
+                class="bg-blue-700 w-2/4 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md"
               >
                 <h3 class="font-semibold text-lg mb-1">2019</h3>
                 <p class="leading-tight text-center">
@@ -113,7 +119,7 @@
                 ></div>
               </div>
               <div
-                class="bg-blue-700 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md"
+                class="bg-blue-700 w-2/4 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md"
               >
                 <h3 class="font-semibold text-lg mb-1">2021</h3>
                 <p class="leading-tight text-center">
@@ -124,7 +130,7 @@
             <!-- left -->
             <div class="flex flex-row-reverse md:contents">
               <div
-                class="bg-blue-700 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md"
+                class="bg-blue-700 w-2/4 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md"
               >
                 <h3 class="font-semibold text-lg mb-1">2022</h3>
                 <p class="leading-tight text-center">
@@ -145,9 +151,11 @@
     </div>
 </div>
 
+
+
     <div class="bg-black py-64">
         <div class="max-w-7xl max mx-auto text-center">
-            <h1 class="text-white font-bold text-7xl pb-20">My favorite video games</h1>
+            <h1 class="text-white font-bold text-7xl pb-20">My <span class="primary-orange">favorite</span> video <span class="primary-orange">games</span></h1>
               <div class="grid grid-cols-3 items-center gap-24">
                 <div class="relative">
                   <img class="relative  z-10" src="/games/mario.png" alt="">
@@ -188,5 +196,6 @@
 .trans{
   transform: translateY(-24rem);
 }
+
 
 </style>
