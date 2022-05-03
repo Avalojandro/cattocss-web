@@ -289,7 +289,7 @@ A proyect by: Alejandro Avalos | https://github.com/Avalojandro/Catto-CSS */
     animation-name: hinge;
         -webkit-animation-name: hinge;
         -moz-animation-name: hinge;
-  }
+}
 
 
 
@@ -1087,7 +1087,8 @@ animation-iteration-count: infinite;
         72% {transform: translateY(-5%);}
         84% {transform: translateY(5%);}
         96% {transform: translateY(0%);}
-        100% {transform: translateY(0%);}}
+        100% {transform: translateY(0%);}
+    }
 
     @keyframes slide-fade-left
     {
