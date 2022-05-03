@@ -1,10 +1,10 @@
 <template>
             <nav class="relative z-50 h-24 select-none">
-            <div class="container relative flex flex-wrap items-center justify-between h-24 mx-auto overflow-hidden font-medium border-b border-gray-200 md:overflow-visible lg:justify-center sm:px-4 md:px-2">
+            <div class="container relative flex flex-wrap items-center justify-between h-24 mx-auto overflow-hidden font-medium border-b border-gray-200 md:overflow-visible lg:justify-center px-4 md:px-2">
                 <div class="flex items-center justify-start w-1/4 h-full pr-4">
                     <a href="#_" class="inline-block py-4 md:py-0">
                         <NuxtLink to="/">
-                            <img src="/catto3.png" class="w-10 inline align-middle" alt="">
+                            <img src="/catto3.png" class="hidden md:inline w-10 inline align-middle" alt="">
                             <span class="align-middle p-1 text-2xl font-black leading-none text-gray-900"><span class="text-white">catto</span><span class="primary-orange">css</span></span>
                         </NuxtLink>
                     </a>
@@ -29,7 +29,7 @@
                         </div>
                     </div>
                 </div>
-                <div  class="absolute right-0 flex flex-col items-center items-end justify-center w-10 h-10 bg-white rounded-full cursor-pointer md:hidden hover:bg-gray-100">
+                <div  class="absolute right-0 mr-4 flex flex-col items-center items-end justify-center w-10 h-10 bg-white rounded-full cursor-pointer md:hidden hover:bg-gray-100">
                     <svg class="w-6 h-6 text-gray-700" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                         <path d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>

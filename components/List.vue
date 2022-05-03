@@ -1,16 +1,14 @@
 <template>
     <div>
 
-        <div class="text-white grid grid-cols-3 gap-4">
+        <div class="text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-32">
             <div v-for="animation of animations"  v-bind:key="animation" class="p-10 text-center items-center">
                 <div @click="sendData(animation.name, animation.code)" :class="getAnimation(animation.class)">
                     <span>{{animation.name}}</span>
-                </div>
-                
+                </div> 
             </div>
             <br>
         </div>
-
     </div>
 </template>
 

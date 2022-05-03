@@ -15,7 +15,7 @@
             <div>
                 <center class="relative">
                    <img src="/avalojandro.png" class="z-20 relative rounded-full p-2 bg-white w-2/4" alt="">
-                   <div class="absolute w-36 h-36 bg-blue-700 z-30 rounded transform translate-x-24 -translate-y-24">
+                   <div class="absolute w-36 h-36 bg-blue-700 z-30 rounded animacion">
                        &nbsp;
                    </div>
                    <div class="absolute triangle rounded z-0 transform left-0 top-0 translate-x-32">
@@ -90,5 +90,31 @@
   transform: translateY(-24rem);
 }
 
+.animacion{
+
+  animation-name: animation;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animation {
+
+  
+        0% {
+          transform: rotate3d(0, 0, 1, 15deg) translateX(6rem) translateY(-6rem);     
+        }
+        25%{
+          transform: rotate3d(0, 0, 1, -10deg) translateX(6rem) translateY(-6rem);
+        }
+        50% {
+          transform: rotate3d(0, 0, 1, 5deg) translateX(6rem) translateY(-6rem);           
+        }
+        75%{
+          transform: rotate3d(0, 0, 1, -5deg) translateX(6rem) translateY(-6rem);
+        }
+        100% {
+          transform: rotate3d(0, 0, 1, 15deg) translateX(6rem) translateY(-6rem);
+        }
+}
 
 </style>

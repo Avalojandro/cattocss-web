@@ -4,11 +4,15 @@
             {{animationName || 'float'}}
         </div>
         <div class="m-8 p-2">
+
+            <div class="ide2">
             <pre class="ide">
               <code class="rainbow">
               {{ animationCode || defaultCode }}
               </code>
-            </pre>
+            </pre>                
+            </div>
+
         </div>
     </div>
 </template>
@@ -59,6 +63,18 @@ export default {
   background-color: #1F2937;
   padding-left: 16px;
   padding-right: 16px;
+  border-radius: 20px;
+  max-height: 30rem;
+  max-width: 40rem;
+  overflow-y: auto;
+}
+
+.ide2{
+  background-color: #1F2937;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
   border-radius: 20px;
 }
 
