@@ -4,11 +4,18 @@
 
             <!-- Demo view -->
             <div class="h-72 lg:h-screen overflow-auto text-white">
+                <div class="py-4 space-x-4 text-center">
+                  <span class="p-2 bg-white primary-orange cursor-pointer rounded-full">Hover</span>
+                  <span class="p-2 bg-transparent text-white border border-red-500 cursor-pointer rounded-full">Infinite</span>
+                  <span class="p-2 bg-transparent text-white border border-red-500 cursor-pointer rounded-full">Infinite</span>
+                  <span class="p-2 bg-transparent text-white border border-red-500 cursor-pointer rounded-full">Infinite</span>
+                  
+                </div>
                 <List @getAnimationName="listDataName" @getAnimationCode="listDataCode"/>
             </div>
             
             <!-- Code view -->
-            <div class="text-white items-center justify-center lg:flex">
+            <div class="text-white items-center justify-center xl:flex">
                <CodePreview :animationName="animationName" :animationCode="animationCode"/> 
             </div>
         </div>
@@ -16,6 +23,7 @@
 </template>
 
 <style>
+
 ::-webkit-scrollbar {
   width: 3px;
   height: 3px;

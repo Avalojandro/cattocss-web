@@ -1,6 +1,8 @@
 
-/*Catto CSS v.3.20 | 2020 | MIT License | 
-A proyect by: Alejandro Avalos | https://github.com/Avalojandro/Catto-CSS */
+/*
+    cattocss v.2.0.0 | 2022 | MIT License  
+    A project by: Avalojandro | https://github.com/Avalojandro/Catto-CSS 
+*/
 
 /*******************************************************************************************/
 
@@ -13,7 +15,7 @@ A proyect by: Alejandro Avalos | https://github.com/Avalojandro/Catto-CSS */
         -moz-transition: .5s, color .10s;
 }
 .h-float:hover{
-    box-shadow: 0 8px 8px 0 #bebbbc,0 8px 8px 0 #adadab;
+    box-shadow: 0 8px 8px 0 #000000,0 8px 8px 0 #000000;
     transform: translate(0px,5px);
         -webkit-transform: translate(0px,5px);
         -moz-transform:translate(0px,5px);
@@ -149,7 +151,7 @@ A proyect by: Alejandro Avalos | https://github.com/Avalojandro/Catto-CSS */
     transform: translate3d(12px, 50%, 3em);
         -webkit-transform: translate3d(12px, 50%, 3em);
         -moz-transform: translate3d(12px, 50%, 3em);
-    box-shadow: 0 8px 8px 0 #bebbbc,0 8px 8px 0 #adadab;
+    box-shadow: 0 8px 8px 0 #000000,0 8px 8px 0 #000000;
 }
 
 /*h-grow*/

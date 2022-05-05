@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <div class="text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-32">
+        <div class="text-white grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 pb-32">
             <div v-for="animation of animations"  v-bind:key="animation" class="p-10 text-center items-center">
                 <div @click="sendData(animation.name, animation.code)" :class="getAnimation(animation.class)">
                     <span>{{animation.name}}</span>
@@ -18,19 +18,19 @@ export default {
     data(){
         return {
             animations: [
-                {name: 'float', id: 0, class: 'h-float', code: `
+                {name: 'float', onDiv:false, id: 0, class: 'h-float', code: `
 .float{
     transition: .5s, color .10s;
     -webkit-transition: .5s, color .10s;
     -moz-transition: .5s, color .10s;
 }
 .float:hover{
-    box-shadow: 0 8px 8px 0 #bebbbc,0 8px 8px 0 #adadab;
+    box-shadow: 0 8px 8px 0 #000000,0 8px 8px 0 #000000;
     transform: translate(0px,5px);
     -webkit-transform: translate(0px,5px);
     -moz-transform:translate(0px,5px);
 }`},
-                {name: 'rotate180', id: 1, class: 'h-rotate-180', code: `
+                {name: 'rotate180', onDiv:true, id: 1, class: 'h-rotate-180', code: `
 .rotate-180{
     transition: .5s, color .10s;
     -webkit-transition: .5s, color .10s;
@@ -41,7 +41,7 @@ export default {
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
 }`},
-                {name: 'rotate360', id: 2, class: 'h-rotate-360', code: `
+                {name: 'rotate360', onDiv:true, id: 2, class: 'h-rotate-360', code: `
 .rotate-360{
     transition: .5s, color .10s;
         -webkit-transition: .5s, color .10s;
@@ -52,174 +52,174 @@ export default {
         -webkit-transform: rotateZ(360deg);
         -moz-transform: rotateZ(360deg);
 }`},
-                {name: 'flex', id: 3, class: 'h-flex', code: `
-.h-flex{
+                {name: 'flex', onDiv:false, id: 3, class: 'h-flex', code: `
+.flex{
     transition: .5s, color .10s;
         -webkit-transition: .5s, color .10s;
         -moz-transition: .5s, color .10s;
 }
-.h-flex:hover{
+.flex:hover{
     transform: matrix(3.0, .5, 0, 1.0, 1.0, 1.0);
         -webkit-transform: matrix(3.0, .5, 0, 1.0, 1.0, 1.0);
         -moz-transform: matrix(3.0, .5, 0, 1.0, 1.0, 1.0);
 }`},
-                {name: 'transLeft', id: 4, class: 'h-transLeft', code: `
-.h-transLeft{
+                {name: 'transLeft', onDiv:false, id: 4, class: 'h-transLeft', code: `
+.transLeft{
     transition: .5s, color .10s;
         -webkit-transition: .5s, color .10s;
         -moz-transition: .5s, color .10s;
 }
-.h-transLeft:hover{
+.transLeft:hover{
     transform: translatex(-20px);
         -webkit-transform: translatex(-20px);
         -moz-transform: translatex(-20px);
 }`},
-                {name: 'transRight', id: 5, class: 'h-transRight', code: `
-.h-transRight{
+                {name: 'transRight', onDiv:false, id: 5, class: 'h-transRight', code: `
+.transRight{
     transition: .5s, color .10s;
         -webkit-transition: .5s, color .10s;
         -moz-transition: .5s, color .10s;
 }
-.h-transRight:hover{
+.transRight:hover{
     transform: translatex(20px);
         -webkit-transform: translatex(20px);
         -moz-transform: translatex(20px);
 }`},
-                {name: 'transUp', id: 6, class: 'h-transUp', code: `
-.h-transUp{
+                {name: 'transUp', onDiv:false, id: 6, class: 'h-transUp', code: `
+.transUp{
     transition: .5s, color .10s;
         -webkit-transition: .5s, color .10s;
         -moz-transition: .5s, color .10s;
 }
-.h-transUp:hover{
+.transUp:hover{
     transform: translatey(-20px);
         -webkit-transform: translatey(-20px);
         -moz-transform: translatey(-20px);
 }`},
-                {name: 'transDown', id: 7, class: 'h-transDown', code: `
-.h-transDown{
+                {name: 'transDown', onDiv:false, id: 7, class: 'h-transDown', code: `
+.transDown{
     transition: .5s, color .10s;
         -webkit-transition: .5s, color .10s;
         -moz-transition: .5s, color .10s;    
 }
-.h-transDown:hover{
+.transDown:hover{
     transform: translatey(20px);
         -webkit-transform: translatey(20px);
         -moz-transform: translatey(20px);
 }`},
-                {name: 'toStretch', id: 8, class: 'h-toStretch', code: `
-.h-toStretch{
+                {name: 'toStretch', onDiv:true, id: 8, class: 'h-toStretch', code: `
+.toStretch{
     transition: .5s, color .10s;
         -webkit-transition: .5s, color .10s;
         -moz-transition: .5s, color .10s;
 }
-.h-toStretch:hover{
+.toStretch:hover{
     transform: scale(2, 0.5);
         -webkit-transform: scale(2, 0.5);
         -moz-transform: scale(2, 0.5);
 }`},
-                {name: 'skew', id: 9, class: 'h-skew', code: `
-.h-skew{
+                {name: 'skew', onDiv:false, id: 9, class: 'h-skew', code: `
+.skew{
     transition: .5s, color .10s;
         -webkit-transition: .5s, color .10s;
         -moz-transition: .5s, color .10s;
 }
-.h-skew:hover{
+.skew:hover{
     transform: skew(30deg, 20deg);
         -webkit-transform: skew(30deg, 20deg);
         -moz-transform: skew(30deg, 20deg);
 }`},
-                {name: 'skewX', id: 10, class: 'h-skewX', code: `
-.h-skewX{
+                {name: 'skewX', onDiv:false, id: 10, class: 'h-skewX', code: `
+.skewX{
     transition: .5s, color .10s;
         -webkit-transition: .5s, color .10s;
         -moz-transition: .5s, color .10s;
 }
-.h-skewX:hover{
+.skewX:hover{
     transform: skewX(30deg);
         -webkit-transform: skewX(30deg);
         -moz-transform: skewX(30deg);
 }`},
-                {name: 'skewY', id: 11, class: 'h-skewY', code: `
-.h-skewY{
+                {name: 'skewY', onDiv:true, id: 11, class: 'h-skewY', code: `
+.skewY{
     transition: .5s, color .10s;
         -webkit-transition: .5s, color .10s;
         -moz-transition: .5s, color .10s;
 }
-.h-skewY:hover{
+.skewY:hover{
     transform: skewY(1.07rad);
         -webkit-transform: skewY(1.07rad);
         -moz-transform: skewY(1.07rad);
 }`},
-                {name: 'floatFluid', id: 12, class: 'h-float-fluid', code: `
-.h-float-fluid{
+                {name: 'floatFluid', onDiv:true, id: 12, class: 'h-float-fluid', code: `
+.float-fluid{
     transition: .5s, color .10s;
         -webkit-transition: .5s, color .10s;
         -moz-transition: .5s, color .10s;
 }
-.h-float-fluid:hover{
+.float-fluid:hover{
     transform: translate3d(12px, 50%, 3em);
         -webkit-transform: translate3d(12px, 50%, 3em);
         -moz-transform: translate3d(12px, 50%, 3em);
-    box-shadow: 0 8px 8px 0 #bebbbc,0 8px 8px 0 #adadab;
+    box-shadow: 0 8px 8px 0 #000000,0 8px 8px 0 #000000;
 }`},
-                {name: 'grow', id: 13, class: 'h-grow', code: `
-.h-grow{
+                {name: 'grow', onDiv:false, id: 13, class: 'h-grow', code: `
+.grow{
     transition: .5s, color .10s;
         -webkit-transition: .5s, color .10s;
         -moz-transition: .5s, color .10s;
 }
-.h-grow:hover{
+.grow:hover{
     transform: scale3d(1.5, 1.5, 0.3);
         -webkit-transform: scale3d(1.5, 1.5, 0.3);
         -moz-transform: scale3d(1.5, 1.5, 0.3);
 }`},
-                {name: 'flipUp360', id: 14, class: 'h-flipUp-360', code: `
-.h-flipUp-360{
+                {name: 'flipUp360', onDiv:false, id: 14, class: 'h-flipUp-360', code: `
+.flipUp-360{
     transition: .5s, color .10s;
         -webkit-transition: .5s, color .10s;
         -moz-transition: .5s, color .10s;
 }
-.h-flipUp-360:hover{
+.flipUp-360:hover{
     transform: rotateX(360deg);
         -webkit-transform: rotateX(360deg);
         -moz-transform: rotateX(360deg);
 }`},
-                {name: 'flipUp180', id: 15, class: 'h-flipUp-180', code: `
-.h-flipUp-180{
+                {name: 'flipUp180', onDiv:false, id: 15, class: 'h-flipUp-180', code: `
+.flipUp-180{
     transition: .5s, color .10s;
         -webkit-transition: .5s, color .10s;
         -moz-transition: .5s, color .10s;
 }
-.h-flipUp-180:hover{
+.flipUp-180:hover{
     transform: rotateX(180deg);
         -webkit-transform: rotateX(180deg);
         -moz-transform: rotateX(180deg);
 }`},
-                {name: 'flipSide180', id: 16, class: 'h-flipSide-180', code: `
-.h-flipSide-180{
+                {name: 'flipSide180', onDiv:false, id: 16, class: 'h-flipSide-180', code: `
+.flipSide-180{
     transition: .5s, color .10s;
         -webkit-transition: .5s, color .10s;
         -moz-transition: .5s, color .10s;
 }
-.h-flipSide-180:hover{
+.flipSide-180:hover{
     transform: rotateY(180deg);
         -webkit-transform: rotateY(180deg);
         -moz-transform: rotateY(180deg);
 }`},
-                {name: 'flipSide360', id: 17, class: 'h-flipSide-360', code: `
-.h-flipSide-360{
+                {name: 'flipSide360', onDiv:false, id: 17, class: 'h-flipSide-360', code: `
+.flipSide-360{
     transition: .5s, color .10s;
         -webkit-transition: .5s, color .10s;
         -moz-transition: .5s, color .10s;
 }
-.h-flipSide-360:hover{
+.flipSide-360:hover{
     transform: rotateY(360deg);
         -webkit-transform: rotateY(360deg);
         -moz-transform: rotateY(360deg);
 }`},
-                {name: 'shake', id: 18, class: 'h-shake', code: `
-.h-shake:hover{
+                {name: 'shake', onDiv:false, id: 18, class: 'h-shake', code: `
+.shake:hover{
     animation-name: shake;
         -webkit-animation-name: shake;
         -moz-animation-name: shake;
@@ -244,8 +244,8 @@ export default {
         90% {transform: translate(1px, 2px) rotate(0deg);}
         100% {transform: translate(1px, -2px) rotate(-1deg);}
     }`},
-                {name: 'shakeFix', id: 19, class: 'h-shakeFix', code: `
-.h-shakeFix:hover{
+                {name: 'shakeFix', onDiv:false, id: 19, class: 'h-shakeFix', code: `
+.shakeFix:hover{
     animation-name: shakefix;
         -webkit-animation-name: shakefix;
         -moz-animation-name: shakefix;
@@ -270,8 +270,8 @@ export default {
         90% {transform: translate(1px, 2px);}
         100% {transform: translate(1px, -2px);}
     }`},
-                {name: 'bounceShakeX', id: 20, class: 'h-bounceShakeX', code: `
-.h-bounceShakeX:hover{
+                {name: 'bounceShakeX', onDiv:true, id: 20, class: 'h-bounceShakeX', code: `
+.bounceShakeX:hover{
     animation-name: bounce-shakeX;
         -webkit-animation-name: bounce-shakeX;
         -moz-animation-name: bounce-shakeX;
@@ -292,8 +292,8 @@ export default {
         96% {transform: translateX(0%);}
         100% {transform: translateX(0%);}
     }`},
-                {name: 'bounceShakeY', id: 21, class: 'h-bounceShakeY', code: `
-.h-bounceShakeY:hover{
+                {name: 'bounceShakeY', onDiv:true, id: 21, class: 'h-bounceShakeY', code: `
+.bounceShakeY:hover{
     animation-name: bounce-shakeY;
         -webkit-animation-name: bounce-shakeY;
         -moz-animation-name: bounce-shakeY;
@@ -314,8 +314,8 @@ export default {
         96% {transform: translateY(0%);}
         100% {transform: translateY(0%);}
     }`},
-                {name: 'surprise', id: 22, class: 'h-surprise', code: `
-.h-surprise:hover{
+                {name: 'surprise', onDiv:false, id: 22, class: 'h-surprise', code: `
+.surprise:hover{
     animation-name: surprise;
         -webkit-animation-name: surprise;
         -moz-animation-name: surprise;
@@ -338,8 +338,8 @@ export default {
         90% {transform: rotate(7deg) scale(2,2);}
         100% {transform: rotate(0deg) scale(1,1);}
     }`},
-                {name: 'jello', id: 23, class: 'h-jello', code: `
-.h-jello:hover {
+                {name: 'jello', onDiv:false, id: 23, class: 'h-jello', code: `
+.jello:hover {
     animation-name: jello;
         -webkit-animation-name: jello;
         -moz-animation-name: jello;
@@ -361,8 +361,8 @@ export default {
         77.7% {transform: skewX(0.390625deg) skewY(0.390625deg);}
         88.8% {transform: skewX(-0.1953125deg) skewY(-0.1953125deg);}
     }`},
-                {name: 'swing', id: 24, class: 'h-swing', code: `
-.h-swing:hover{
+                {name: 'swing', onDiv:false, id: 24, class: 'h-swing', code: `
+.swing:hover{
     animation-name: swing;
         -webkit-animation-name: swing;
         -moz-animation-name: swing;
@@ -378,8 +378,8 @@ export default {
         80% {transform: rotate3d(0, 0, 1, -5deg);}
         to  {transform: rotate3d(0, 0, 1, 0deg);}
     }`},
-                {name: 'hinge', id: 25, class: 'h-hinge', code: `
-.h-hinge:hover {
+                {name: 'hinge', onDiv:true, id: 25, class: 'h-hinge', code: `
+.hinge:hover {
     animation-duration: 2s;
         -webkit-animation-duration: 2s;
         -moz-animation-duration: 2s;
@@ -400,8 +400,13 @@ export default {
     },
     methods: {
         getAnimation(animationClass){
-            let className = 'p-5 cursor-pointer bg-transparent border border-primary bg-primary text-white font-bold rounded';
+            let className = 'p-5 cursor-pointer bg-transparent border border-primary bg-primary text-white font-bold rounded wrp';
             return `${className} ${animationClass}`;
+        },
+
+        animationOnDiv(animationClass, onDiv){
+            let className = 'p-10 text-center items-center';
+            
         },
 
         sendData(name, code){
