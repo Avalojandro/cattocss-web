@@ -5,18 +5,18 @@
                     <a href="#_" class="inline-block py-4 md:py-0">
                         <NuxtLink to="/">
                             <img src="/catto3.png" class="hidden md:inline w-10 inline align-middle" alt="">
-                            <span class="align-middle p-1 text-2xl font-black leading-none text-gray-900"><span class="text-white">catto</span><span class="primary-orange">css</span></span>
+                            <span class="align-middle p-1 text-2xl font-black leading-none text-gray-900"><span class="text-white">catto</span><span class="text-primary-catto">css</span></span>
                         </NuxtLink>
                     </a>
                 </div>
                 <div class="top-0 left-0 items-start hidden w-full h-full p-4 text-sm bg-gray-900 bg-opacity-50 md:items-center md:w-3/4 md:absolute lg:text-base md:bg-transparent md:p-0 md:relative md:flex">
                     <div class="flex-col w-full h-auto overflow-hidden bg-white rounded-lg md:bg-transparent md:overflow-visible md:rounded-none md:relative md:flex md:flex-row">
-                        <a href="#_" class="inline-flex items-center block w-auto h-16 px-6 text-xl font-black leading-none text-gray-900 md:hidden">tails<span class="primary-orange">.</span></a>
+                        <a href="#_" class="inline-flex items-center block w-auto h-16 px-6 text-xl font-black leading-none text-gray-900 md:hidden">tails<span class="text-primary-catto">.</span></a>
                         <div class="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-8 md:w-2/3 md:mt-0 md:flex-row md:items-center">
-                            <NuxtLink to="/"><a href="#_" class="inline-block w-full py-2 mx-0 ml-6 font-medium text-left primary-orange md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center">Home</a></NuxtLink>
-                          <NuxtLink to="/animations"><a href="#_" class="inline-block w-full py-2 mx-0 font-medium text-left md:w-auto md:px-0 md:mx-2 hover:primary-orange lg:mx-3 md:text-center text-white">Animations</a></NuxtLink>
-                            <NuxtLink to="/about"><a href="#_" class="inline-block w-full py-2 mx-0 font-medium text-left md:w-auto md:px-0 md:mx-2 hover:primary-orange lg:mx-3 md:text-center text-white">About</a></NuxtLink>
-                            <a href="#_" class="inline-block w-full py-2 mx-0 font-medium text-left md:w-auto md:px-0 md:mx-2 hover:primary-orange lg:mx-3 md:text-center text-white">Contribute</a>
+                            <NuxtLink to="/"><a href="#_" class="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-primary-catto md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center">Home</a></NuxtLink>
+                          <NuxtLink to="/animations"><a href="#_" class="inline-block w-full py-2 mx-0 font-medium text-left md:w-auto md:px-0 md:mx-2 hover:text-primary-catto lg:mx-3 md:text-center text-white">Animations</a></NuxtLink>
+                            <NuxtLink to="/about"><a href="#_" class="inline-block w-full py-2 mx-0 font-medium text-left md:w-auto md:px-0 md:mx-2 hover:text-primary-catto lg:mx-3 md:text-center text-white">About</a></NuxtLink>
+                            <a href="#_" class="inline-block w-full py-2 mx-0 font-medium text-left md:w-auto md:px-0 md:mx-2 hover:text-primary-catto lg:mx-3 md:text-center text-white">Contribute</a>
                             <a href="#_" class="absolute top-0 left-0 hidden py-2 mt-6 ml-10 mr-2 lg:inline-block md:mt-0 md:ml-2 lg:mx-3 md:relative text-white">
                                 <svg class="inline w-5 h-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                             </a>
