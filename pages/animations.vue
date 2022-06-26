@@ -2,9 +2,9 @@
   <div class="h-screen overflow-hidden">
     <div class="grid grid-cols-1 gap-y-8 lg:gap-y-0 lg:grid-cols-2 py-12 pl-0 2xl:pl-12">
       <!-- Demo view -->
-      <div class="h-72 lg:h-screen overflow-auto text-white">
+      <div class="h-72 lg:h-screen overflow-auto">
         <nav class="py-4 space-x-4 text-center">
-          <a v-for="type in types" id="{type}" :key="type" href="#hover" class="p-2 target font-bold inline-block cursor-pointer border-b-4 border-primary-catto">{{ type }}</a>
+          <a v-for="(type, index) in types" :key="type" :class="selectedItemStyle(index)" @click="itemIndex(index)">{{ type }}</a>
         </nav>
         <List @getAnimationName="listDataName" @getAnimationCode="listDataCode" />
       </div>
@@ -22,26 +22,31 @@ export default {
   data () {
     return {
       animationName: null,
+      selectedItem: 0,
       animationCode: null,
       types: ['Hover', 'One Time', 'Loops', 'Buttons']
     }
   },
   methods: {
+    selectedItemStyle (index) {
+      const className = 'p-2 target font-bold inline-block cursor-pointer transition-all duration-200 ease-in-out'
+      return (index === this.selectedItem) ? `${className} border-b-4 text-primary-catto border-primary-catto` : `${className} border-b text-white border-white`
+    },
     listDataName (value) {
       this.animationName = value
     },
     listDataCode (value) {
       this.animationCode = value
     },
-    acive (index = 0) {
-
+    itemIndex (i) {
+      this.selectedItem = i
     }
   }
 
 }
 </script>
 
-<style>
+<style scoped>
 
 ::-webkit-scrollbar {
   width: 3px;
