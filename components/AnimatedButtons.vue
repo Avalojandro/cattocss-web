@@ -131,8 +131,8 @@ export default {
 }
 .toStretch:hover{
     transform: scale(2, 0.5);
-        -webkit-transform: scale(2, 0.5);
-        -moz-transform: scale(2, 0.5);
+        -webkit-transform: scale(1.2, 0.5);
+        -moz-transform: scale(1.2, 0.5);
 }`
         },
         {
@@ -170,8 +170,8 @@ export default {
 }
 .skewY:hover{
     transform: skewY(1.07rad);
-        -webkit-transform: skewY(1.07rad);
-        -moz-transform: skewY(1.07rad);
+        -webkit-transform: skewY(15deg);
+        -moz-transform: skewY(15deg);
 }`
         },
         {

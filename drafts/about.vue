@@ -1,18 +1,39 @@
 <template>
   <div class="">
-    <section class="py-20 ">
+    <section class="">
       <div class="">
-        <div class="max-w-7xl max mx-auto text-center text-white pt-12 pb-24">
-          <div class="text-5xl md:text-6xl lg:text-7xl font-extrabold">
-            <span class="text-primary-catto px-2"><span class="text-white">What</span> is <span class="text-white">catto</span>css<span class="text-white">?</span></span>
+        <!-- <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 mx-8 lg:mx-12 xl:mx-24 items-center">
+          <div class="max-w-7xl max mx-auto text-center lg:text-left text-white pt-12 pb-24">
+            <div class="text-5xl md:text-6xl lg:text-7xl font-extrabold">
+              <span class="text-primary-catto px-2"><span class="text-white">What</span> is <span class="text-white">catto</span>css<span class="text-white">?</span></span>
+            </div>
+            <p class="pt-12 text-center lg:text-justify">
+              This project was developed with one goal in mind: that all web developers have a place where they can easily and quickly find css animations to
+              adapt to their websites without the need to install libraries or packages, cattocss contains a generous list of css animations with access to its source code easily and quickly.
+            </p>
           </div>
-          <p class="mx-8 md:mx-64 pt-12 text-justify md:text-center">
-            This project was developed with one goal in mind: that all web developers have a place where they can easily and quickly find css animations to
-            adapt to their websites without the need to install libraries or packages, cattocss contains a generous list of css animations with access to its source code easily and quickly.
-          </p>
-          <center class="px-8 md:px-40 py-12">
-            <img class="w-full md:w-2/4" src="table.svg" alt="">
-          </center>
+          <div>
+            <center>
+              <img src="/cat_computer.svg" alt="cattocss">
+            </center>
+          </div>
+        </div> -->
+
+        <div class="">
+          <div class="max-w-7xl max mx-auto py-24 text-center text-white">
+            <div class="px-2 text-5xl md:text-6xl lg:text-7xl font-extrabold">
+              <span class="text-primary-catto px-2"><span class="text-white">What</span> is <span class="text-white">catto</span>css<span class="text-white">?</span></span>
+            </div>
+            <p class="mx-8 md:mx-64 pt-12 text-justify md:text-center">
+              This project was developed with one goal in mind: that all web developers have a place where they can easily and quickly find css animations to
+              adapt to their websites without the need to install libraries or packages, cattocss contains a generous list of css animations with access to its source code easily and quickly.
+            </p>
+            <center class="px-8 md:px-40 py-12">
+              <center>
+                <img class=" w-2/4" src="/cat_computer.svg" alt="cattocss">
+              </center>
+            </center>
+          </div>
         </div>
 
         <div class="bg-gray-800">
