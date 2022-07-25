@@ -13,17 +13,17 @@
         <div class="flex-col w-full h-auto overflow-hidden bg-white rounded-lg md:bg-transparent md:overflow-visible md:rounded-none md:relative md:flex md:flex-row">
           <a class="inline-flex items-center w-auto h-16 px-6 text-xl font-black leading-none text-gray-900 md:hidden">tails<span class="text-primary-catto">.</span></a>
           <div class="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-8 md:w-2/3 md:mt-0 md:flex-row md:items-center">
-            <NuxtLink class="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-primary-catto md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center" to="/">
-              Home
-            </NuxtLink>
-            <NuxtLink to="/animations">
+            <!-- <NuxtLink class="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-primary-catto md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center" to="/">
+              Animations
+            </NuxtLink> -->
+            <!-- <NuxtLink to="/animations">
               <a class="inline-block w-full py-2 mx-0 font-medium text-left md:w-auto md:px-0 md:mx-2 hover:text-primary-catto lg:mx-3 md:text-center text-white">Animations</a>
-            </NuxtLink>
-            <NuxtLink to="/about">
+            </NuxtLink> -->
+            <!-- <NuxtLink to="/about">
               <a class="inline-block w-full py-2 mx-0 font-medium text-left md:w-auto md:px-0 md:mx-2 hover:text-primary-catto lg:mx-3 md:text-center text-white">About</a>
-            </NuxtLink>
-            <a class="inline-block w-full py-2 mx-0 font-medium text-left md:w-auto md:px-0 md:mx-2 hover:text-primary-catto lg:mx-3 md:text-center text-white">Contribute</a>
-            <a class="absolute top-0 left-0 hidden py-2 mt-6 ml-10 mr-2 lg:inline-block md:mt-0 md:ml-2 lg:mx-3 md:relative text-white">
+            </NuxtLink> -->
+            <!-- <a class="inline-block w-full py-2 mx-0 font-medium text-left md:w-auto md:px-0 md:mx-2 hover:text-primary-catto lg:mx-3 md:text-center text-white">Contribute</a> -->
+            <!-- <a class="absolute top-0 left-0 hidden py-2 mt-6 ml-10 mr-2 lg:inline-block md:mt-0 md:ml-2 lg:mx-3 md:relative text-white">
               <svg
                 class="inline w-5 h-5"
                 fill="none"
@@ -33,7 +33,7 @@
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               ><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-            </a>
+            </a> -->
           </div>
           <div class="flex flex-col items-start justify-end w-full pt-4 md:items-center md:w-1/3 md:flex-row md:py-0">
             <NuxtLink to="/avalojandro">
